@@ -81,9 +81,13 @@
 
 
         h1 {
-            text-align: center;
-            color: #3498db;
-        }
+    text-align: center;
+    color: #3498db;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 100px;
+}
 
 
 
@@ -92,16 +96,21 @@
 
         #start-test-btn {
             position: fixed;
-            top: 18px;
-            left: 18px;
-            padding: 10px;
+            top: 70%;
+            left: 46%;
+            padding: 15px;
             background-color: #3498db;
             color: #ecf0f1;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             z-index: 1000;
+            font-weight: bold;
         }
+        #start-test-btn:hover {
+    transform: scale(1.15);
+    transition: transform 0.5s ease;
+}
 
         /* #timer {
             position: fixed;
@@ -162,10 +171,18 @@
     border-radius: 3px;
 }
 
-
+@media only screen and (max-width: 600px) {
+    /* Styles for screens with a maximum width of 600px (adjust as needed) */
+    #start-test-btn {
+        top: 570px;
+        left: 167px;
+        padding: 18px;
+    }
+}
     </style>
 </head>
 <body>
+    <br><br>
 <h1>CEH Latest Dumps Test</h1>
 <div id="quiz-container"></div>
 <div id="quiz-container"></div>
