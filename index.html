@@ -850,7 +850,7 @@
     // Function to generate the quiz
     function generateQuiz() {
         const quizContainer = document.getElementById('quiz-container');
-
+        const shuffledQuestions = shuffleArray(questions);
         questions.forEach((q, index) => {
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('question');
@@ -1153,6 +1153,17 @@ document.querySelectorAll('.dropdown-button').forEach((dropdown) => {
             dropdownButton.style.display = 'block';
         }
     }
+
+
+// Function to shuffle an array using Fisher-Yates algorithm
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 
 </script>
 
